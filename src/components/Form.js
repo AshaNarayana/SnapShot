@@ -4,6 +4,7 @@ const Form = ({ handleSubmit, history, resetSearch }) => {
   const updateSearchInput = (e) => {
     setSearchEntry(e.target.value);
   };
+
   const handleReset = (e) => {
     handleSubmit(e, history, searchEntry);
     setSearchEntry("");
