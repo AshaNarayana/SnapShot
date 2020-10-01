@@ -233,3 +233,52 @@ input {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
   }
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.row {
+  height: 150px;
+}
+
+.map-container {
+  color: "red";
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  /* :hover {
+    z-index: 1;
+  } */
+}
+
+.table-custom table {
+  border: 1px solid black;
+  float: "left";
+}
+.table-custom td {
+  padding: 5px;
+}
+
+.table-custom-row {
+  color: #c11;
+  float: left;
+}

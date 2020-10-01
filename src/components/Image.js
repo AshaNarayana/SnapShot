@@ -1,9 +1,25 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Image = ({ url, title }) => (
-  <li>
-    <img src={url} alt={title} />
-  </li>
-);
+const Image = ({ url, title, photoId, longitude, latitude, owner }) => {
+  console.log("key", photoId);
+  return (
+    <li>
+      <NavLink
+        to={{
+          pathname: "/photoDetails",
+          aboutProps: {
+            latitude: latitude,
+            longitude: longitude,
+            title: title,
+            owner: owner,
+          },
+        }}
+      >
+        <img src={url} alt={title} />
+      </NavLink>
+    </li>
+  );
+};
 
 export default Image;
