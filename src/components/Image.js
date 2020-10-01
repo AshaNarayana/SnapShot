@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Image = ({ url, title, photoId, longitude, latitude, owner }) => {
-  console.log("key", photoId);
   return (
     <li>
       <NavLink

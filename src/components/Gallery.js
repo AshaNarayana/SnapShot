@@ -8,7 +8,6 @@ const Gallery = (props) => {
   // map variables to each item in fetched image array and return image component
   if (results.length > 0) {
     images = results.map((image) => {
-      console.log("image value", image);
       let farm = image.farm;
       let server = image.server;
       let id = image.id;
@@ -18,6 +17,7 @@ const Gallery = (props) => {
       let longitude = image.longitude;
       let owner = image.owner;
       let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
+
       return (
         <Image
           url={url}

@@ -6,6 +6,7 @@ export const PhotoContext = createContext();
 const PhotoContextProvider = (props) => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const runSearch = (query) => {
     axios
       .get(
@@ -23,6 +24,7 @@ const PhotoContextProvider = (props) => {
         );
       });
   };
+
   return (
     <PhotoContext.Provider value={{ images, loading, runSearch }}>
       {props.children}

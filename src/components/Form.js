@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-
-const Form = ({ handleSubmit, history }) => {
+const Form = ({ handleSubmit, history, resetSearch }) => {
   const [searchEntry, setSearchEntry] = useState("");
-  // update search text state
   const updateSearchInput = (e) => {
     setSearchEntry(e.target.value);
   };
+  const handleReset = (e) => {
+    handleSubmit(e, history, searchEntry);
+    setSearchEntry("");
+  };
+
   return (
-    <form
-      className="search-form"
-      onSubmit={(e) => handleSubmit(e, history, searchEntry)}
-    >
+    <form className="search-form" onSubmit={(e) => handleReset(e)}>
       <input
         type="text"
         name="search"
