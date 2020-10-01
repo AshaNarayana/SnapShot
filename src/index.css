@@ -272,7 +272,7 @@ input {
 
 .table-custom table {
   border: 1px solid black;
-  float: "left";
+  float: "center";
 }
 .table-custom td {
   padding: 5px;
@@ -281,4 +281,8 @@ input {
 .table-custom-row {
   color: #c11;
   float: left;
+}
+
+.image-container-row {
+  padding: 5px;
 }

@@ -8,21 +8,30 @@ const PhotoContextProvider = (props) => {
   const [loading, setLoading] = useState(true);
 
   const runSearch = (query) => {
-    axios
-      .get(
-        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&extras=geo&has_geo=true&format=json&nojsoncallback=1`
-      )
-      .then((response) => {
-        setImages(response.data.photos.photo);
-
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(
-          "Encountered an error with fetching and parsing data",
-          error
-        );
-      });
+    const storedImage = JSON.parse(localStorage.getItem(query)) || [];
+    if (storedImage.length === 0) {
+      axios
+        .get(
+          `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&extras=geo&has_geo=true&format=json&nojsoncallback=1`
+        )
+        .then((response) => {
+          setImages(response.data.photos.photo);
+          setLoading(false);
+          localStorage.setItem(
+            query,
+            JSON.stringify(response.data.photos.photo)
+          );
+        })
+        .catch((error) => {
+          console.log(
+            "Encountered an error with fetching and parsing data",
+            error
+          );
+        });
+    } else {
+      setImages(storedImage);
+      setLoading(false);
+    }
   };
 
   return (

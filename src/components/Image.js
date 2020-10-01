@@ -12,6 +12,7 @@ const Image = ({ url, title, photoId, longitude, latitude, owner }) => {
             longitude: longitude,
             title: title,
             owner: owner,
+            url: url,
           },
         }}
       >

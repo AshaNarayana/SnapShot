@@ -7,11 +7,19 @@ const ImageInfo = (props) => {
   const longitude = props.location.aboutProps.longitude;
   const title = props.location.aboutProps.title;
   const owner = props.location.aboutProps.owner;
+  const url = props.location.aboutProps.url;
+
   return (
     <div className="row">
       <div className="column">
-        <div className="row">Image</div>
-        <div className="row">
+        <div className="row  ">
+          <img
+            src={url}
+            alt={title}
+            style={{ width: "300px", height: "150px", padding: "3px" }}
+          />
+        </div>
+        <div className="row image-container-row ">
           <ImageDetails
             longitude={longitude}
             latitude={latitude}
