@@ -283,6 +283,12 @@ input {
   float: left;
 }
 
-.image-container-row {
+.image-info-row {
   padding: 5px;
+}
+
+.image-container-row {
+  width: "300px";
+  height: "150px";
+  padding: "3px";
 }

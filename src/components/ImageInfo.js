@@ -3,7 +3,6 @@ import MapContainer from "./MapContainer";
 import ImageDetails from "./ImageDetails";
 
 const ImageInfo = (props) => {
-  console.log("props", props);
   if (props.location.aboutProps) {
     const latitude = props.location.aboutProps.latitude;
     const longitude = props.location.aboutProps.longitude;
@@ -21,7 +20,7 @@ const ImageInfo = (props) => {
               style={{ width: "300px", height: "150px", padding: "3px" }}
             />
           </div>
-          <div className="row image-container-row ">
+          <div className="row image-info-row  ">
             <ImageDetails
               longitude={longitude}
               latitude={latitude}

@@ -9,7 +9,7 @@ const MapContainer = ({ longitude, latitude, title }) => {
     return (
       <div style={{ height: "50vh", width: "100%" }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyDhPKfVsPG1yPOXZQPt79DuMIyvw9Mtzu8" }}
+          bootstrapURLKeys={{ key: "AIzaSyBarubOh2orvI1jq1T9F_9OZ7bcD_tqwer" }}
           defaultZoom={8}
           defaultCenter={{ lat: lat, lng: lon }}
         >
