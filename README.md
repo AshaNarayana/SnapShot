@@ -12,7 +12,7 @@
 
 Snap Shot is a gallery created using React,React Hooks, React Router and Context API. The Routes were setup for four default pages and a search page. Also the images were displayed using the Flickr API and axios to fetch data.
 
-### Motivation
+### ABOUT
 
 This is forked project and following changes have been implemented.
 
@@ -51,7 +51,9 @@ Application uses the package google-map-react to display maps .
 ● New components are added to display image location , image information and redisplays selected image as shown below
 
 
+[Image Information](https://github.com/AshaNarayana/SnapShot)
 
+![](/MapsInfo.png)
 
 ### Getting Started
 
