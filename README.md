@@ -17,38 +17,38 @@ Snap Shot is a gallery created using React,React Hooks, React Router and Context
 This is forked project and following changes have been implemented.
 
 ## PROBLEM STATEMENTS
-1) Our customers would like to see friendly URLs instead of hash routes (#)
-Solution :
-● Changed hashrouter in App.js to BrowserRouter
-● Removed Base URL
+1.   Our customers would like to see friendly URLs instead of hash routes (#)
+- Solution :
+* Changed hashrouter in App.js to BrowserRouter
+* Removed Base URL
 
-2) The searched text in the search form input remains when a category is selected.
+2.   The searched text in the search form input remains when a category is selected.
 It should be empty. 
-Solution :
-In form.js when user clicks on onSubmit it resets state to empty strings “”
+- Solution :
+* In form.js when user clicks on onSubmit it resets state to empty strings “”
 setSearchEntry("");
-3) There are a lot of unnecessary requests to the API. we need to provide a solution to avoid them.
-Solution :
-Added local storage in PhotoContext.js to store JSON response we receive from flickr API.
+3.   There are a lot of unnecessary requests to the API. we need to provide a solution to avoid them.
+- Solution :
+* Added local storage in PhotoContext.js to store JSON response we receive from flickr API.
 const storedImage = JSON.parse(localStorage.getItem(query)) || [];
 
 
 ## NEW USE CASE
-1)We are only interested in geolocated photos.
+1. We are only interested in geolocated photos.
 
-Flickr API supports optional query parameters to obtain geo location of images.
-● has_geo : Filters images which has location information
-● extras=geo : To obtain latitude and longitude
+- Flickr API supports optional query parameters to obtain geo location of images.
+* has_geo : Filters images which has location information
+* extras=geo : To obtain latitude and longitude
 Hence final API looks like
 `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&extras=geo&has_geo=true&format=json&nojsoncallback=1`
 
-2) Users would see this information on a map .When you click on a photo, a modal shows with the map and the information of the photo.
+- Users would see this information on a map .When you click on a photo, a modal shows with the map and the information of the photo.
 Solution :
 Added new route./photoDetails
 <Route path="/photoDetails" component={ImageInfo} />
 When user clicks on image it directs to new path http://localhost:3000/photoDetails
 Application uses the package google-map-react to display maps .
-● New components are added to display image location , image information and redisplays selected image as shown below
+* New components are added to display image location , image information and redisplays selected image as shown below
 
 
 [Image Information](https://github.com/AshaNarayana/SnapShot)
