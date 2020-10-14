@@ -1,13 +1,7 @@
 import React from "react";
 
-const Marker = ({ color, name }) => {
-  return (
-    <div
-      className="marker"
-      style={{ backgroundColor: color, cursor: "pointer" }}
-      title={name}
-    />
-  );
+const Marker = ({ name }) => {
+  return <div className="marker" title={name} />;
 };
 
 export default Marker;

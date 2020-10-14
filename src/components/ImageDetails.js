@@ -3,8 +3,8 @@ import React from "react";
 const ImageDetails = ({ longitude, latitude, title, owner }) => {
   return (
     <div>
-      <table className="table-custom" style={{ float: "right" }}>
-        <tbody>
+      <table>
+        <tbody className="table-custom">
           <tr>
             <td className="table-custom-row">Image Title</td>
             <td>{title}</td>

@@ -65,6 +65,8 @@ This is forked project and following changes have been implemented.
 Click the demo link or clone/download the repository on your local machine.
 Create a config.js file in api folder inside src folders. In config.js file write
 `export const apiKey = "YOUR_FLIKR_API_KEY";`
+create .env file and add your google API_KEY to use google maps
+REACT_APP_API_KEY=YOUR_GOOGLE_API_KEY_HERE
 
 ##### Install dependencies
 
@@ -81,11 +83,3 @@ Create a config.js file in api folder inside src folders. In config.js file writ
 - React Hooks
 - Context API
 - Flickr API
-
-### Features
-
-**1. Responsive Design.**
-
-**2. Search functionality added to search photos from API.**
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

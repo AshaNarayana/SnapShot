@@ -14,13 +14,9 @@ const ImageInfo = (props) => {
       <div className="row">
         <div className="column">
           <div className="row  ">
-            <img
-              src={url}
-              alt={title}
-              style={{ width: "300px", height: "150px", padding: "3px" }}
-            />
+            <img src={url} alt={title} className="image-container-row" />
           </div>
-          <div className="row image-info-row  ">
+          <div className="row image-info-row">
             <ImageDetails
               longitude={longitude}
               latitude={latitude}
@@ -29,7 +25,7 @@ const ImageInfo = (props) => {
             />
           </div>
         </div>
-        <div className="column" style={{ backgroundColor: "#D3D3D3" }}>
+        <div className="column grey-background">
           <MapContainer
             longitude={longitude}
             latitude={latitude}
